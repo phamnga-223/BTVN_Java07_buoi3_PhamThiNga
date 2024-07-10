@@ -10,13 +10,22 @@ public class Cau3 {
 
 	public static void main (String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Ký số n1 = ");
-		int n1 = scanner.nextInt();
-		System.out.print("Ký số n2 = ");
-		int n2 = scanner.nextInt();
-		int n = n1 + n2;
+		// B1: Nhập vào số n
+		System.out.print("Xin vui lòng nhập vào số n: ");
+		int n = scanner.nextInt();
 		
-		String ketQua = "Tổng là: " + n;
+		// B2: Kiểm tra số n
+		if (n >= 100 || n <= 9) {
+			System.out.println("Số nhập vào phải là số có 2 chữ số!");
+			return;
+		}
+		
+		// B3: Tách lấy 2 ký số và tính tổng
+		int a1 = n / 10; int a2 = n % 10;
+		int tong = a1 + a2;
+		
+		// B4: In ra kết quả
+		String ketQua = "Tổng là: " + tong;
 		System.out.println(ketQua);
 	}
 	
